@@ -102,9 +102,10 @@ function App() {
                     </header>
                     <div className="content">
                       <p className="rocket-panel">
-                      Enter your Rocketpool node address below to either create a Rocketsplit contract or manage an existing Rocketsplit withdrawal address. 🚀
+                      {/* Enter your Rocketpool node address below to either create a Rocketsplit contract or manage an existing Rocketsplit withdrawal address. 🚀 */}
+                      We just completed our mainnet test and found a small issue with the contract. We are working on a fix and will be back soon. Thank you for your patience. 🚀
                       </p>
-                      <NodeFinder setWithdrawalAddress={setWithdrawalAddress}
+                      {false && <NodeFinder setWithdrawalAddress={setWithdrawalAddress}
                         withdrawalAddress={withdrawalAddress}
                         setNodeAddress={setNodeAddress}
                         nodeAddress={nodeAddress}
@@ -114,6 +115,7 @@ function App() {
                         isRocketSplit={isRocketSplit}
                         setIsRocketSplit={setIsRocketSplit}
                         toast={toast}/>
+                      }
                       {withdrawalAddress &&
                         <WithdrawalDisplay
                           withdrawalAddress={withdrawalAddress}
